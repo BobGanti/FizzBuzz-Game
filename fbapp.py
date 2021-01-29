@@ -67,14 +67,18 @@ def playGame():
         if scoreList[i] == maxScore:
             winnerList.append(playerList[i])
 
-    if len(winnerList) > 1:
-        print("\nDRAW GAME FOR THE FOLLOWING:")
-        for i in range(len(winnerList)):
-            print(winnerList[i])
-    else:
-        print(f"\nThe winner is {winnerList[0]}")
+    if numPlayers > 1:
+        if len(winnerList) > 1:
+            print("\nDRAW GAME FOR THE FOLLOWING:")
+            for i in range(len(winnerList)):
+                print(winnerList[i])
+        else:
+            print(f"\nThe Winner is {winnerList[0]}")
 
-    for i in range(len(playerList)):
-        print(f"{playerList[i]}: {scoreList[i]} Points")
+        for i in range(len(playerList)):
+            print(f"{playerList[i]}: {scoreList[i]} Points")
+
+    else:
+        print(f"\n{winnerList[0]},  You scored {scoreList[0]} Points")
 
 playGame()
