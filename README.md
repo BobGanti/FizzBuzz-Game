@@ -1,1 +1,1 @@
-# FizzBuzz-the-Game
+# FizzBuzz Game
